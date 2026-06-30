@@ -111,16 +111,29 @@
   }
   .match.in{opacity:1;transform:none}
   .match-head{
-    display:flex;align-items:baseline;gap:clamp(10px,2.5vw,16px);margin-bottom:16px;
+    display:flex;align-items:flex-start;gap:clamp(10px,2.5vw,16px);margin-bottom:16px;
     padding-bottom:14px;border-bottom:1px solid var(--line);
     flex-wrap:wrap;
   }
+  .match-num{padding-top:2px}
   .match-num{
     font-family:'Anton',sans-serif;color:var(--orange);
     font-size:1.05rem;letter-spacing:.05em;
   }
   .match-title{font-size:clamp(1.05rem,4.6vw,1.35rem);font-weight:600;letter-spacing:-.01em}
   .match-title .vs{color:var(--muted);font-weight:400;margin:0 8px;font-size:.85em}
+  .match-time{
+    margin-top:5px;color:var(--muted);
+    font-size:clamp(.72rem,3.2vw,.82rem);letter-spacing:.02em;
+    display:flex;align-items:center;gap:7px;
+  }
+  .match-time::before{
+    content:"";width:12px;height:12px;flex-shrink:0;
+    background:var(--orange-soft);
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E") center/contain no-repeat;
+            mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E") center/contain no-repeat;
+  }
+  .match-titlewrap{flex:1 1 auto;min-width:0}
   .live{
     margin-left:auto;display:inline-flex;align-items:center;gap:7px;
     font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange-soft);
@@ -185,6 +198,9 @@
     <a href="#m1">Norway · Ivory Coast</a>
     <a href="#m2">France · Sweden</a>
     <a href="#m3">Mexico · Ecuador</a>
+    <a href="#m4">England · DR Congo</a>
+    <a href="#m5">Belgium · Senegal</a>
+    <a href="#m6">USA · Bosnia &amp; Herz.</a>
   </nav>
 </header>
 
@@ -203,7 +219,10 @@
   <article class="match" id="m1">
     <div class="match-head">
       <span class="match-num">01</span>
-      <h2 class="match-title">Norway <span class="vs">vs</span> Ivory Coast</h2>
+      <div class="match-titlewrap">
+        <h2 class="match-title">Norway <span class="vs">vs</span> Ivory Coast</h2>
+        <p class="match-time">1 July · 1:00 AM</p>
+      </div>
       <span class="live"><span class="dot"></span>Live</span>
     </div>
     <div class="frame-wrap">
@@ -214,7 +233,10 @@
   <article class="match" id="m2">
     <div class="match-head">
       <span class="match-num">02</span>
-      <h2 class="match-title">France <span class="vs">vs</span> Sweden</h2>
+      <div class="match-titlewrap">
+        <h2 class="match-title">France <span class="vs">vs</span> Sweden</h2>
+        <p class="match-time">1 July · 5:00 AM</p>
+      </div>
       <span class="live"><span class="dot"></span>Live</span>
     </div>
     <div class="frame-wrap">
@@ -225,11 +247,56 @@
   <article class="match" id="m3">
     <div class="match-head">
       <span class="match-num">03</span>
-      <h2 class="match-title">Mexico <span class="vs">vs</span> Ecuador</h2>
+      <div class="match-titlewrap">
+        <h2 class="match-title">Mexico <span class="vs">vs</span> Ecuador</h2>
+        <p class="match-time">1 July · 9:00 AM</p>
+      </div>
       <span class="live"><span class="dot"></span>Live</span>
     </div>
     <div class="frame-wrap">
       <iframe src="https://ntv.cx/embed?t=U3kvVGsxU1RSbFNVNzYraHQ0eDVFWktGeGVzQkNwSHdpdVRML1F2aWtWTEh1TmlaamdQM3ZDVE1ydk9vZGdOT0h4WkN6ODNja3NGMGI0VnlpVlFMcUE9PQ~~" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="match" id="m4">
+    <div class="match-head">
+      <span class="match-num">04</span>
+      <div class="match-titlewrap">
+        <h2 class="match-title">England <span class="vs">vs</span> DR Congo</h2>
+        <p class="match-time">2 July · 12:00 AM</p>
+      </div>
+      <span class="live"><span class="dot"></span>Live</span>
+    </div>
+    <div class="frame-wrap">
+      <iframe src="https://ntv.cx/embed?t=U3kvVGsxU1RSbFNVNzYraHQ0eDVFWktGeGVzQkNwSHdpdVRML1F2aWtWSXlkbCt2Mms1bm4xQ0RNdFc1N0IzMEJHbEpLd0ozQkYrNWg0NU9MMWZsamc9PQ~~" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="match" id="m5">
+    <div class="match-head">
+      <span class="match-num">05</span>
+      <div class="match-titlewrap">
+        <h2 class="match-title">Belgium <span class="vs">vs</span> Senegal</h2>
+        <p class="match-time">2 July · 4:00 AM</p>
+      </div>
+      <span class="live"><span class="dot"></span>Live</span>
+    </div>
+    <div class="frame-wrap">
+      <iframe src="https://ntv.cx/embed?t=U3kvVGsxU1RSbFNVNzYraHQ0eDVFWktGeGVzQkNwSHdpdVRML1F2aWtWSjdmUk9yNXpvWm5SZm1VY2k1MUlSS1dSdHRhR3pEc1NRL0VUVjZvdFF0YkE9PQ~~" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="match" id="m6">
+    <div class="match-head">
+      <span class="match-num">06</span>
+      <div class="match-titlewrap">
+        <h2 class="match-title">United States <span class="vs">vs</span> Bosnia &amp; Herzegovina</h2>
+        <p class="match-time">2 July · 8:00 AM</p>
+      </div>
+      <span class="live"><span class="dot"></span>Live</span>
+    </div>
+    <div class="frame-wrap">
+      <iframe src="https://ntv.cx/embed?t=U3kvVGsxU1RSbFNVNzYraHQ0eDVFWktGeGVzQkNwSHdpdVRML1F2aWtWTDZicmFxc2F2VkJWSkplemlRMjEwWVRLNGltU3hvekhVejAwNWZNdSt4TXBUSTJ6cDVQdFRWcy9QSkxFNFo4bnc9" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </article>
 
